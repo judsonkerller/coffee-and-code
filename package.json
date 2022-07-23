@@ -4,12 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "graphql": "^16.5.0",
+    "graphql-request": "^4.3.0",
     "next": "12.2.2",
+    "next-optimized-images": "^2.6.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
