@@ -6,8 +6,6 @@ name: Node.js CI
 on:
   push:
     branches: [ build ]
-  pull_request:
-    branches: [ build ]
 
 jobs:
   build:
@@ -20,21 +18,22 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - name: Checkout
-      - uses: actions/checkout@v3
-
+      - name: Get files
+        uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: Install and Build
-      - uses: yarn && yarn build && yarn export
-
+      - name: Install packages
+        run: npm ci
+      - name: Build project
+        run: npm run build
+      - name: Export static files
+        run: npm run export
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
       - name: Deploy
-      - uses: JamesIves/github-pages-deploy-action@3.7.1
-      - with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: out
-        CLEAN: true
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: out
