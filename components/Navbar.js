@@ -9,9 +9,10 @@ const Navbar = ({username = null, cart}) => {
       <div className={styles.logo}>
         <Image 
           src="/assets/logo.png"
-          width="110"
-          height="70"
           alt="Coffee and Code - Logo"
+          layout="fixed"
+          width={110}
+          height={70}
         />
       </div>
       <ul className={styles.link_items}>

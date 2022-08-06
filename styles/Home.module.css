@@ -1,20 +1,26 @@
 .title h1 {
-  color: rgb(39, 39, 39);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5rem;
-  font-size: 2rem;
+ color: rgb(39, 39, 39);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 5rem;
+ font-size: 2rem;
 }
 
 .main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 3rem;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+ grid-gap: 3rem;
 }
 
+.footer {
+ position: absolute;
+ bottom: 0;
+}
 
 @media screen and (max-width: 768px) {
-  .main {
-  }
+ .main {
+  margin-top: 20px;
+  gap: 2rem;
+ }
 }
