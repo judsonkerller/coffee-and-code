@@ -18,12 +18,14 @@
 
 .footer p {
  font-weight: bold;
+ font-family: "Roboto", sans-serif;
  color: #300000;
 }
 
 .footer a {
  color: #300000;
  transition: 0.4s;
+ font-family: "Roboto", sans-serif;
  border-bottom: 2px solid transparent;
 }
 
@@ -32,15 +34,4 @@
 }
 
 @media screen and (max-width: 768px) {
- .footer {
-  gap: 1rem;
- }
-
- .footer p {
-  font-size: 16px;
- }
-
- .footer a {
-  font-size: 20px;
- }
 }

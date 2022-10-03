@@ -1,8 +1,8 @@
 .card {
- margin-top: 5rem;
+ margin-top: 2rem;
  border-radius: 2rem;
  overflow: hidden;
- margin-bottom: 32.5vh;
+ margin-bottom: 2rem;
  box-shadow: 15px 20px 40px rgba(216, 211, 211, 0.4);
 }
 .card h2 {
@@ -51,9 +51,34 @@
  margin-right: 0.5rem;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
  .card {
-  margin: 0rem 2rem;
+  margin: 0rem auto 2rem;
   margin-bottom: 35vh;
+ }
+}
+
+@media screen and (min-width: 600px) {
+ .card {
+  margin: auto;
+  margin-left: 2rem;
+  margin-bottom: 23vh;
+ }
+} */
+
+/* ========== MEDIA QUERIES (MEDIUM DEVICES) ========== */
+
+@media screen and (max-width: 1024px) {
+ .card {
+  margin: 4rem;
+  gap: 3rem;
+ }
+}
+
+/* ========== MEDIA QUERIES (SMALL DEVICES) ========== */
+
+@media screen and (max-width: 600px) {
+ .card {
+  margin: 2rem;
  }
 }

@@ -69,6 +69,7 @@
 .link_items a {
  color: #300000;
  text-decoration: none;
+ font-family: "Roboto", sans-serif;
  padding: 5px;
  transition: 0.4s;
  border-bottom: 2px solid transparent;
@@ -79,16 +80,4 @@
 }
 
 @media screen and (max-width: 768px) {
- .navbar {
-  gap: 2rem;
- }
-
- .link_items a {
-  font-size: 20px;
- }
-
- .logo {
-  width: 90px;
-  height: 60px;
- }
 }
